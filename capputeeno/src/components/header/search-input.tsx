@@ -28,11 +28,13 @@ const InputContainer = styled.div`
     }
 `
 
-const InputSearchIcon = ()=>{
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+
+const InputSearchIcon = (props: InputProps)=>{
 
     return (
-        <InputContainer placeholder="Procurando por algo especifico ?">
-            <SearchInput/>
+        <InputContainer>
+            <SearchInput {...props}/>
             <SearchIcon/>
         </InputContainer>
     )

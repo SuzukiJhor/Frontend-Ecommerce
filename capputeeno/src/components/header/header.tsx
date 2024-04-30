@@ -3,6 +3,7 @@
 import { styled } from 'styled-components'
 import { Saira_Stencil_One } from 'next/font/google'
 import InputSearchIcon from './search-input';
+import CartControll from './cart-controll';
 
 
 const sairaStencil = Saira_Stencil_One({
@@ -28,8 +29,8 @@ const Header = () => {
   return (
     <TagHeader>
         <Logo className={sairaStencil.className}>Capputeeno</Logo>
-        <InputSearchIcon/>
-        <div></div>
+        <InputSearchIcon placeholder="Procurando por algo especifico ?"/>
+        <CartControll/>
     </TagHeader>
   )
 }
