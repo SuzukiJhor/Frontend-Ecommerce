@@ -1,12 +1,14 @@
 "use client"
 
 import { styled } from 'styled-components'
+import SearchIcon from './search-icon';
 
 const SearchInput = styled.input`
-    width: 352;
+    width: 352px;
     border-radius: 8px;
+    border: none;
     padding: 10px 16px;
-    background-color: var(--bg--secondary);
+    background-color: var(--bg-secondary);
     font-family: inherit;
     font-weight: 400;
     font-size: 14px;
@@ -14,4 +16,26 @@ const SearchInput = styled.input`
     color: var(--text-dark);
 `
 
-export default SearchInput
+const InputContainer = styled.div`
+    position: relative;
+    width: 352px;
+
+    svg {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+`
+
+const InputSearchIcon = ()=>{
+
+    return (
+        <InputContainer placeholder="Procurando por algo especifico ?">
+            <SearchInput/>
+            <SearchIcon/>
+        </InputContainer>
+    )
+
+}
+export default InputSearchIcon
