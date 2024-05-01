@@ -1,8 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import FilterBar from '../components/filter-bar/filter-bar';
 
 export default function Home() {
   return (
-    <h1>Ola mundo</h1>  
+    <main className={styles.main}>
+      <FilterBar/>
+    </main>
   );
 }
